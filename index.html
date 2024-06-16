@@ -9,7 +9,7 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .heading {
+        .domainname {
 
             color: rgb(142, 190, 32);
             font-size: 48px;
@@ -25,7 +25,9 @@
             padding-left: 50px;
             background-image: url(swlimage.png);
             font-family: sans-serif;
-       
+            background-repeat: no-repeat;
+            background-position: 70px;
+
         }
 
         .checkmark {
@@ -79,11 +81,11 @@
 </head>
 
 <body>
-    <h2 class="heading">swl.co.ke</h2>
+    <h2 class="domainname">swl.co.ke</h2>
     <div>
         <h2 class="subheading">
             This Domain Has Been Successfully Registered!<br></h2>
-        <p>We are excited to announce that swl.co.ke has been registered and is currently under development.
+        <p>We are excited to announce that <span class="domainname">swl.co.ke</span> has been registered and is currently under development.
         </p>
     </div>
     <p class="section2"><span class="subheading1">What's Next?</span><br>
@@ -111,7 +113,15 @@
     <p>For more information, visit the <a href="https://www.hostafrica.com/" style="color: #8ebe20;">HOSTAFRICA
             website</a></p>
 
-
+    <script>
+  
+			window.addEventListener('load', hostnamedisplay);
+			function hostnamedisplay() {
+				var x = location.hostname;
+				document.querySelectorAll('.domainname').forEach((domainName) => (domainName.innerHTML = x));
+			}
+	
+    </script>
 
 </body>
 
